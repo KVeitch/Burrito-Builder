@@ -31,6 +31,7 @@ export class OrderForm extends Component {
     if (name !== '' && ingredients.length > 0 ) {
       postOrder(this.state)
         .then(returnedOrder => addOrder(returnedOrder))
+        .catch(error=> console.log(error))
       this.clearInputs();
     }
   }
