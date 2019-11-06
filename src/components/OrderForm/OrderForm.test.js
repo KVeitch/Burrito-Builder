@@ -60,10 +60,6 @@ describe('OrderForm',() => {
     expect(wrapper.state()).toEqual(mockState)
   })
 
-//tests needed HAPPY path and SAD PATH 2X
-
-
-
   it('should send the order to the api when handleSubmit is called', () => {
     const mockEvent = {
       preventDefault:jest.fn(),
@@ -79,6 +75,11 @@ describe('OrderForm',() => {
     wrapper.instance().handleSubmit(mockEvent)
     expect(postOrder).toHaveBeenCalledWith(mockState)
   })
+
+  //tests needed HAPPY path and SAD PATH 2X
+  // it('should add orders when te button is successfully clicked ',()=>{})
+
+
 
   it('should call handleSubmit when the button is clicked',() => {
     const event = { preventDefault: jest.fn() };
