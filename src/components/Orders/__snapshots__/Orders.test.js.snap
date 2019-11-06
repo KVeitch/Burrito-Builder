@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Order with no data should match the snapshot 1`] = `
+<section>
+  <p>
+    No orders yet!
+  </p>
+</section>
+`;
+
 exports[`Orders should match the snapshot 1`] = `
 <section>
   <div

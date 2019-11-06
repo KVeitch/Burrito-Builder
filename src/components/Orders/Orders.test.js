@@ -49,6 +49,14 @@ const mockMath = Object.create(global.Math);
 mockMath.random = () => 0.5;
 global.Math = mockMath;
 
+describe('Order with no data',() => {
+  it('should match the snapshot',() => {
+    const wrapper = shallow(<Orders orders={[]} setOrders={actions.setOrders}/>)
+    expect(wrapper).toMatchSnapshot();
+  });
+})
+
+
 describe('Orders', () => {
   let wrapper;
   beforeEach(()=>{
