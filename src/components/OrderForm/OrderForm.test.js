@@ -60,21 +60,25 @@ describe('OrderForm',() => {
     expect(wrapper.state()).toEqual(mockState)
   })
 
-  // it('should send the order to the api when handleSubmit is called', () => {
-  //   const mockEvent = {
-  //     preventDefault:jest.fn(),
-  //   }
-  //   const mockState = {
-  //     name:'Susan',
-  //     ingredients:['SourCream']
-  //   }
+//tests needed HAPPY path and SAD PATH 2X
 
-  //   // postOrder = jest.fn().mockImplementation(()=>Promise.resolve())
-  //   wrapper.instance().setState(mockState)
 
-  //   wrapper.instance().handleSubmit(mockEvent)
-  //   expect(postOrder).toHaveBeenCalledWith(mockState)
-  // })
+
+  it('should send the order to the api when handleSubmit is called', () => {
+    const mockEvent = {
+      preventDefault:jest.fn(),
+    }
+    const mockState = {
+      name:'Susan',
+      ingredients:['SourCream']
+    }
+
+    postOrder.mockImplementation(()=>Promise.resolve())
+    wrapper.instance().setState(mockState)
+
+    wrapper.instance().handleSubmit(mockEvent)
+    expect(postOrder).toHaveBeenCalledWith(mockState)
+  })
 
   it('should call handleSubmit when the button is clicked',() => {
     const event = { preventDefault: jest.fn() };

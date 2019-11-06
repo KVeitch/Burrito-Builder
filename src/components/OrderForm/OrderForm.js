@@ -36,9 +36,6 @@ export class OrderForm extends Component {
     }
   }
 
-
-
-
   clearInputs = () => {
     this.setState({name: '', ingredients: []});
   }
