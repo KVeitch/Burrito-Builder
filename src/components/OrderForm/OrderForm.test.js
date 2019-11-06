@@ -13,7 +13,7 @@ describe('OrderForm',() => {
     wrapper = shallow(<OrderForm />)
   })
 
-  it('should matc h the snapshot',() => {
+  it('should match the snapshot',() => {
     expect(wrapper).toMatchSnapshot();
   });
 
