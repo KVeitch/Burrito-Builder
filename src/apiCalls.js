@@ -16,7 +16,7 @@ export const postOrder = async newOrder => {
   };
   const response = await fetch(url, options);
   if (!response.ok) {
-    throw new Error('Sorry.  Unable to create your new co-order.');
+    throw new Error('Sorry.  Unable to create your new order.');
   }
   const returnedOrder = await response.json();
   return returnedOrder;
